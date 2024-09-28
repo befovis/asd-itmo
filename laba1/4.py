@@ -21,3 +21,5 @@ w.close()
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))
 print("Max memory ", tracemalloc.get_traced_memory()[1] / 2 ** 20, "mb")
 tracemalloc.stop()
+
+
