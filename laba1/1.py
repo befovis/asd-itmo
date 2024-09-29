@@ -6,6 +6,8 @@ def insertion_sort(n, lst):
             else:
                 break
     return lst
+
+
 import time, tracemalloc
 tracemalloc.start()
 t_start = time.perf_counter()
