@@ -7,8 +7,8 @@ def selection_sort(n, lst):
             if mn > lst[j]:
                 mn = j
                 temp = j
-    if temp != i:
-        lst[i], lst[temp] = lst[temp], lst[i]
+        if temp != i:
+            lst[i], lst[temp] = lst[temp], lst[i]
     return lst
 tracemalloc.start()
 t_start = time.perf_counter()
@@ -24,4 +24,3 @@ w.close()
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))
 print("Max memory ", tracemalloc.get_traced_memory()[1] / 2 ** 20, "mb")
 tracemalloc.stop()
-

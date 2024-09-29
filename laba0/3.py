@@ -9,7 +9,7 @@ for i in range(2, n+1):
     mas.append((mas[-1] + mas[-2]) % 10)
 f = open('output.txt', 'w')
 f.write(str(mas[n]))
-f.close
+f.close()
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))
 print("Max memory ", tracemalloc.get_traced_memory()[1] / 2 ** 20, "mb")
 tracemalloc.stop()
