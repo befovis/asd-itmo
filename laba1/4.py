@@ -23,3 +23,6 @@ print("Max memory ", tracemalloc.get_traced_memory()[1] / 2 ** 20, "mb")
 tracemalloc.stop()
 
 
+
+
+
