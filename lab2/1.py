@@ -4,7 +4,7 @@ def merge_sort(lst):
     mas1 = lst[:ln]
     mas2 = lst[ln:]
     if len(mas1) > 1:
-        mas1 = merge_sort(mas1)
+         mas1 = merge_sort(mas1)
     if len(mas2) > 1:
         mas2 = merge_sort(mas2)
     return merge(mas1, mas2)
@@ -19,17 +19,17 @@ def merge(a, b):
         else:
             mas.append(b[j])
             j += 1
-            mas += a[i:] + b[j:]
+    mas += a[i:] + b[j:]
     return mas
 tracemalloc.start()
 t_start = time.perf_counter()
-f = open("input.txt")
+f = open("input")
 n = int(f.readline())
 mas = [int(el) for el in f.readline().split()]
 f.close()
 str_lst = list(map(str, merge_sort(mas)))
 res = " ".join(str_lst)
-w = open("output.txt", 'w')
+w = open("output", 'w')
 w.write(res)
 w.close()
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))
