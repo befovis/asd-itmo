@@ -9,7 +9,7 @@ def search_max_subarray(lst):
         if sm > 0 and bl:
             frst_ind = i-1
             bl = False
-            sm += lst[i]
+        sm += lst[i]
         if mx_sum < sm:
             mx_sum = sm
             lst_ind = i
@@ -21,15 +21,16 @@ def search_max_subarray(lst):
     return lst[frst_ind:lst_ind+1]
 tracemalloc.start()
 t_start = time.perf_counter()
-f = open("input.txt")
+f = open("input")
 n = int(f.readline())
 mas = [int(el) for el in f.readline().split()]
 f.close()
 str_lst = list(map(str, search_max_subarray(mas)))
 res = " ".join(str_lst)
-w = open("output.txt", 'w')
+w = open("output", 'w')
 w.write(res)
 w.close()
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))
 print("Max memory ", tracemalloc.get_traced_memory()[1] / 2 ** 20, "mb")
 tracemalloc.stop()
+

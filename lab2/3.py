@@ -23,7 +23,6 @@ def merge(arr, temp_arr, left, mid, right):
     k = left
     inv_count = 0
 
-    # Сливаем две половины
     while i <= mid and j <= right:
         if arr[i] <= arr[j]:
             temp_arr[k] = arr[i]
