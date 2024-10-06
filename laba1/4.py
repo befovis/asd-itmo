@@ -6,6 +6,7 @@ def linear_search(mas, v):
     if len(ind) > 0:
         return ind
     return [-1]
+
 import time, tracemalloc
 tracemalloc.start()
 t_start = time.perf_counter()
