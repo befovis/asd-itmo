@@ -57,7 +57,7 @@ def count_inversions(arr, n, time_limit=2):
         return "Превышено время выполнения"
 
 if __name__ == "__main__":
-    with open("input", "r") as file:
+    with open("scr/input", "r") as file:
         n = int(file.readline())
         arr = list(map(int, file.readline().split()))
 
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     t_start = time.perf_counter()
     result = count_inversions(arr, n)
 
-    with open("output", "w") as file:
+    with open("scr/output", "w") as file:
         file.write(str(result) + "\n")
 
     print("Время работы: %s секунд " % (time.perf_counter() - t_start))

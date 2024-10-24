@@ -24,11 +24,11 @@ def has_majority_element(arr):
         return 1
     return 0
 if __name__ == "__main__":
-    with open("input", "r") as file:
+    with open("scr/input", "r") as file:
         n = int(file.readline())
         arr = list(map(int, file.readline().split()))
     result = has_majority_element(arr)
-    with open("output", "w") as file:
+    with open("scr/output", "w") as file:
         file.write(str(result) + "\n")
 tracemalloc.start()
 t_start = time.perf_counter()

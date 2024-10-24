@@ -14,7 +14,7 @@ def binary_search(a, s):
 def main():
     tracemalloc.start()
     t_start = time.perf_counter()
-    with open("input") as f:
+    with open("scr/input") as f:
         n = int(f.readline())
         a = list(map(int, f.readline().split()))
         k = int(f.readline())
@@ -26,7 +26,7 @@ def main():
             break
         lst.append(binary_search(a, b[i]))
     res = " ".join(map(str, lst))
-    with open("output", 'w') as w:
+    with open("scr/output", 'w') as w:
         w.write(res)
     print("Время работы: %s секунд" % (time.perf_counter() - t_start))
     print("Max memory ", tracemalloc.get_traced_memory()[1] / 2 ** 20, "mb")
