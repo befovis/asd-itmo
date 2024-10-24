@@ -27,10 +27,10 @@ def addition_bin(a, b):
 import time, tracemalloc
 tracemalloc.start()
 t_start = time.perf_counter()
-f = open("input.txt")
+f = open("scr/input.txt")
 a, b = map(str, f.readline().split())
 res = addition_bin(a, b)
-w = open("output.txt", 'w')
+w = open("scr/output.txt", 'w')
 w.write(res)
 w.close()
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))

@@ -9,13 +9,13 @@ def insertion_sort(n, lst):
 import time, tracemalloc
 tracemalloc.start()
 t_start = time.perf_counter()
-f = open("input.txt")
+f = open("scr/input.txt")
 n = int(f.readline())
 mas = [int(el) for el in f.readline().split()]
 f.close()
 str_lst = list(map(str, insertion_sort(n, mas)))
 res = " ".join(str_lst)
-w = open("output.txt", 'w')
+w = open("scr/output.txt", 'w')
 w.write(res)
 w.close()
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))

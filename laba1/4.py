@@ -10,13 +10,13 @@ def linear_search(mas, v):
 import time, tracemalloc
 tracemalloc.start()
 t_start = time.perf_counter()
-f = open("input.txt")
+f = open("scr/input.txt")
 mas = [el for el in f.readline().split()]
 v = f.readline()
 f.close()
 str_lst = list(map(str, linear_search(mas, v)))
 res = ", ".join(str_lst)
-w = open("output.txt", 'w')
+w = open("scr/output.txt", 'w')
 w.write(res)
 w.close()
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))
